@@ -16,6 +16,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2' # RubyonRailsTutor use 'foundation-rails'
 gem 'slim-rails', '~> 3.0', '>= 3.0.1' # RubyonRailsTutor use 'haml-rails'
 # gem 'therubyracer', platforms: :ruby
+gem 'selenium-webdriver', '~> 2.48', '>= 2.48.1'
+gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
 
 group :development, :test do
   gem 'byebug' # RubyonRailsTutor use 'pry', 'pry-debugger'

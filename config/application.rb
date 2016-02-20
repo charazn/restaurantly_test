@@ -33,8 +33,9 @@ module Restaurantly
       g.fixture_replacement :factory_girl, dir: "spec/factories"
 
       g.helper false
-      g.stylesheets false
-      g.javascripts false
+      # g.stylesheets false
+      # g.javascripts false
+      g.assets false
     end
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
