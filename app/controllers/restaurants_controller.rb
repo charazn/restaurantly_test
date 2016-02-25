@@ -20,7 +20,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
-      flash[:success] = "Restaurant successfully created"
+      flash[:notice] = "Restaurant successfully created"
       redirect_to restaurant_path @restaurant
     else
       flash[:error] = "Restaurant is invalid" # @restaurant.errors.inspect
@@ -41,7 +41,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
 
     if @restaurant.update(restaurant_params)
-      flash[:success] = "Restaurant successfully updated"
+      flash[:notice] = "Restaurant successfully updated"
       redirect_to restaurant_path @restaurant
     else
       flash[:error] = "Restaurant is invalid"
@@ -52,6 +52,7 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
+    flash[:notice] = "Restaurant is successfully destroyed"
     redirect_to root_path
   end
 
