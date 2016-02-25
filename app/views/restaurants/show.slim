@@ -1,2 +1,10 @@
-.row
-  h1 = @restaurant.name
+.container
+  .row
+    .col-md-12
+      h2 #{@restaurant.id}. #{@restaurant.name}
+      = link_to "edit", edit_restaurant_path(@restaurant)
+      '
+      = link_to "destroy", restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" }
+      hr
+      p = link_to "Back to Index", restaurants_path
+
