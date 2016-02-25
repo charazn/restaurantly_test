@@ -3,7 +3,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-# require 'spec_helper'
+# require 'spec_helper' # Deleted
 require 'rspec/rails'
 # Tinkerbox
 require 'shoulda-matchers'
@@ -34,12 +34,13 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures" # Not in Tinkerbox
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures" # Not in Tinkerbox because not using fixtures but Factories
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = true # To use database_cleaner strategies,
+                                           # have to change this to false, then add the DatabaseCleaner blocks.
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -98,7 +99,7 @@ RSpec.configure do |config|
   # Allows RSpec to persist some state between runs in order to support
   # the `--only-failures` and `--next-failure` CLI options. We recommend
   # you configure your source control system to ignore this file.
-  config.example_status_persistence_file_path = "spec/examples.txt"
+  # config.example_status_persistence_file_path = "spec/examples.txt"
 
   # Limits the available syntax to the non-monkey patched syntax that is
   # recommended. For more details, see:
@@ -134,17 +135,19 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   # Kernel.srand config.seed # Commented out
 
+  # According to Sherwin Chua, from RSpec 3.2+, don't need this entire DatabaseCleaner block,
+  # as RSpec cleans the database for you after running each test suite?
   # DatabaseCleaner # From Github
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
-  end
+  # config.before(:suite) do
+  #   DatabaseCleaner.strategy = :transaction
+  #   DatabaseCleaner.clean_with(:truncation)
+  # end
 
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
-  end
+  # config.around(:each) do |example|
+  #   DatabaseCleaner.cleaning do
+  #     example.run
+  #   end
+  # end
 
   # RubyonRailsTutor # placed in spec/support/database_cleaner.rb
   # config.before(:suite) do

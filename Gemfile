@@ -16,20 +16,25 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2' # RubyonRailsTutor use 'foundation-rails'
 gem 'slim-rails', '~> 3.0', '>= 3.0.1' # RubyonRailsTutor use 'haml-rails'
 # gem 'therubyracer', platforms: :ruby
-gem 'selenium-webdriver', '~> 2.48', '>= 2.48.1'
-gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+
+# Added myself
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 group :development, :test do
   gem 'byebug' # RubyonRailsTutor use 'pry', 'pry-debugger'
   gem 'capybara', '~> 2.6', '>= 2.6.2'
   # gem 'quiet_assets' # Quiet Assets turns off the Rails asset pipeline log
   # gem 'rspec-rails', 'factory_girl_rails', 'shoulda-matchers' extracted out to only group :test
+  # Added myself
+  gem 'guard-rspec', '~> 4.6', '>= 4.6.4', require: false
 end
 
 # Auto generated from rails new
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  # Added myself
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 # Following Tinkerbox pattern
@@ -37,6 +42,9 @@ group :test do
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'factory_girl_rails', '~> 4.6'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+  # From RubyonRailsTutor
+  gem 'selenium-webdriver', '~> 2.48', '>= 2.48.1'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
 end
 
 # From RubyonRailsTutor
