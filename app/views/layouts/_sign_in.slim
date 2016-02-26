@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-md-12
+      - unless current_user
+        = link_to "Sign Up / In", "/users/auth/twitter", class: "btn btn-primary btn-sm"
+      - else
+        = link_to "logout", destroy_user_session_path, method: :delete
