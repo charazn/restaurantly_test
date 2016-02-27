@@ -21,7 +21,8 @@ gem 'slim-rails', '~> 3.0', '>= 3.0.1' # RubyonRailsTutor use 'haml-rails'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'font-awesome-sass', '~> 4.5'
 # gem 'devise', '~> 3.5', '>= 3.5.6'
-gem 'dotenv-rails', '~> 2.1'
+# gem 'omniauth', '~> 1.3', '>= 1.3.1'
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 
 group :development, :test do
   gem 'byebug' # RubyonRailsTutor use 'pry', 'pry-debugger'
@@ -30,6 +31,7 @@ group :development, :test do
   # gem 'rspec-rails', 'factory_girl_rails', 'shoulda-matchers' extracted out to only group :test
   # Added myself
   gem 'guard-rspec', '~> 4.6', '>= 4.6.4', require: false
+  gem 'dotenv-rails', '~> 2.1'
 end
 
 # Auto generated from rails new
