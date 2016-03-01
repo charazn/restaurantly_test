@@ -3,7 +3,6 @@
     .col-md-12
       h3 Restaurantly Spots!
     .col-md-12
-      = link_to "Create a restaurant", new_restaurant_path, class: "btn btn-default"
       h2
         - @restaurants.each do |restaurant|
           p
@@ -12,3 +11,5 @@
             = link_to "edit", edit_restaurant_path(restaurant)
             ' ,
             = link_to "destroy", restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?" }
+
+      = link_to "Create a restaurant", new_restaurant_path, class: "btn btn-default"
