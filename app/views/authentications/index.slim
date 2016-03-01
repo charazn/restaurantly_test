@@ -1,0 +1,25 @@
+.container
+  h1 Authentications
+
+  table
+    tr
+      th User ID
+      th Name
+      th Email
+      th Provider
+      th UID
+      th Location
+      th URL
+      th Image
+      th
+    tr
+      - @authentications.each do |authentication|
+        td = authentication.user.id
+        td = authentication.name
+        td = authentication.user.email
+        td = authentication.provider
+        td = authentication.uid
+        td = authentication.location
+        td = authentication.url
+        td = image_tag(authentication.image)
+        td = link_to "Destroy", authentication_path(authentication), method: :delete
