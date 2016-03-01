@@ -9,7 +9,9 @@ en:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
+      user: "If you are signing in with Twitter, you still need to provide your email to sign up." #, you still need to provide your email to sign up."
       default_message: "Please review the problems below:"
+
     # Examples
     # labels:
     #   defaults:
