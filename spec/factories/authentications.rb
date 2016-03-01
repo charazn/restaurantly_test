@@ -1,11 +1,13 @@
 FactoryGirl.define do
-  factory :authorization do
+  factory :authentication do
     provider "MyString"
     uid "MyString"
-    user_id 1
     token "MyString"
     secret "MyString"
     name "MyString"
+    image "MyString"
+    location "MyString"
     url "MyString"
+    user_id 1
   end
 end
