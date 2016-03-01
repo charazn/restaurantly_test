@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.5.2'
 gem 'pg', '~> 0.18.4'
 # gem 'sass-rails', '~> 5.0' # See 'bootstrap-sass' below
 gem 'uglifier', '>= 1.3.0'
@@ -20,7 +20,7 @@ gem 'slim-rails', '~> 3.0', '>= 3.0.1' # RubyonRailsTutor use 'haml-rails'
 # Added myself
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'font-awesome-sass', '~> 4.5'
-# gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 # gem 'omniauth', '~> 1.3', '>= 1.3.1'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 

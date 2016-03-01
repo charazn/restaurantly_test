@@ -36,6 +36,7 @@ module Restaurantly
       # g.stylesheets false
       # g.javascripts false
       g.assets false
+      g.template_engine false
     end
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

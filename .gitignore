@@ -15,3 +15,4 @@
 .DS_Store
 # /public/folder/* # Do not ignore the 404, 422, 500, favicon.ico, robots.txt files
 .byebug_history
+.env
