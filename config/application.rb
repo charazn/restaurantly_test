@@ -16,7 +16,6 @@ module Restaurantly
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Hong Kong'
 
-    # From Tinkerbox
     config.active_record.default_timezone = :local
 
     config.generators do |g|
@@ -33,8 +32,6 @@ module Restaurantly
       g.fixture_replacement :factory_girl, dir: "spec/factories"
 
       g.helper false
-      # g.stylesheets false
-      # g.javascripts false
       g.assets false
       g.template_engine false
     end

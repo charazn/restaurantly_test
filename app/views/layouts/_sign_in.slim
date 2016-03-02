@@ -5,9 +5,7 @@
         => current_user.email
         => link_to "Edit Profile", edit_user_registration_path, class: "btn btn-sm btn-success"
         => link_to "Devise Logout", destroy_user_session_path, method: :delete, class: "btn btn-sm btn-danger"
-        / => link_to "Twitter Logout", signout_path, class: "btn btn-sm btn-warning"
       - else
         => link_to "Sign Up with Devise", new_user_registration_path, class: "btn btn-sm btn-success"
         => link_to "Sign In with Devise", new_user_session_path, class: "btn btn-sm btn-primary"
-        / => link_to "Sign in with Twitter", "/auth/twitter", class: "btn btn-sm btn-info"
         => link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-sm btn-info"
