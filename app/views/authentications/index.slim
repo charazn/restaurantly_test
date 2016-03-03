@@ -12,8 +12,8 @@
       th URL
       th Image
       th
-    tr
-      - @authentications.each do |authentication|
+    - @authentications.each do |authentication|
+      tr
         td = authentication.user.id
         td = authentication.name
         td = authentication.user.email

@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :authentications
 
-  def apply_omniauth(omniauth)
-    authentications.build(provider: omniauth["provider"], uid: omniauth["uid"])
-  end
+  # def apply_omniauth(omniauth)
+  #   authentications.build(provider: omniauth["provider"], uid: omniauth["uid"])
+  # end
 
   def build_facebook_auth(omniauth)
     authentications.build(
