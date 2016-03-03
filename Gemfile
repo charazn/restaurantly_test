@@ -18,6 +18,7 @@ gem 'font-awesome-sass', '~> 4.5'
 
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+gem 'omniauth-facebook', '~> 3.0'
 
 group :development, :test do
   gem 'byebug'
