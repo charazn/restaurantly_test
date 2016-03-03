@@ -8,6 +8,21 @@ html
     = csrf_meta_tags
 
   body
+    / Facebook Javascript SDK Login button
+    / From https://developers.facebook.com/docs/facebook-login/web/login-button
+    / <div id="fb-root"></div>
+    / <script>
+    /   (
+    /     function(d, s, id) {
+    /       var js, fjs = d.getElementsByTagName(s)[0];
+    /       if (d.getElementById(id)) return;
+    /       js = d.createElement(s); js.id = id;
+    /       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=ENV['FACEBOOK_APP_ID']";
+    /       fjs.parentNode.insertBefore(js, fjs);
+    /     }(document, 'script', 'facebook-jssdk')
+    /   );
+    / </script>
+
     = render "layouts/flash"
     = render "layouts/sign_in"
     = yield

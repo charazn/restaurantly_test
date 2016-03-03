@@ -7,5 +7,9 @@
         => link_to "Devise Logout", destroy_user_session_path, method: :delete, class: "btn btn-sm btn-danger"
       - else
         => link_to "Sign Up with Devise", new_user_registration_path, class: "btn btn-sm btn-success"
-        => link_to "Sign In with Devise", new_user_session_path, class: "btn btn-sm btn-primary"
+        => link_to "Sign In with Devise", new_user_session_path, class: "btn btn-sm btn-warning"
         => link_to "Sign In with Twitter", user_omniauth_authorize_path(:twitter), class: "btn btn-sm btn-info"
+        = link_to "Sign In with Facebook", "/auth/facebook", class: "btn btn-sm btn-primary"
+        / Facebook Javascript SDK Login button
+        / From https://developers.facebook.com/docs/facebook-login/web/login-button
+        / <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
